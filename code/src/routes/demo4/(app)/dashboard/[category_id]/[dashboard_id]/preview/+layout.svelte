@@ -1,0 +1,1 @@
+preview &gt; <slot />

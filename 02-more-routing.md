@@ -14,7 +14,7 @@
   - `/[[lang]]/home`
   - 0-1 number of path section
 
-## Breaking out of layouts
+## Breaking out of layouts (demo4)
   - `/(app)/dashboard/[category_id]/[dashboard_id]/preview/+page.svelte`
   - `/(app)/dashboard/[category_id]/[dashboard_id]/preview/+page@[category_id].svelte`
     - skips:
@@ -55,6 +55,7 @@
 - `/src/routes/foo-[suffix]/+page.svelte`
 - `/src/routes/foo-bar/+page.svelte`
 
+- demo5
 - More specifics routes have higher priority
 - Parameters with matchers `[a=integer]` have higher priortiy than those without `[a]`
 - `[[optional]]` and `[...rest]` parameters are ignored unless they are the final part of the route, in which case they are treated with lowest priority. In other words `x/[[y]]/z` is treated equivalently to `x/z` for the purposes of sorting
@@ -70,4 +71,7 @@
 
 ## Exercise
 
-TODO:
+- Add 1 new route:
+  - photos details page `/photos/:photoid`
+  - make sure photoid is integer
+  - navigate from photos page to photos detail page using shallow routing

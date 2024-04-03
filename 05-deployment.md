@@ -31,3 +31,6 @@
   - `@sveltejs/adapter-cloudflare-workers` for Cloudflare Workers
   - `@sveltejs/adapter-cloudflare` for Cloudflare Pages
   - ...[community adapters](https://www.sveltesociety.dev/packages?category=sveltekit-adapters)
+
+## Exercise
+- Deploy

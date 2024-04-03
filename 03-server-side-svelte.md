@@ -14,6 +14,7 @@
   - `*.server.ts`
   - `$lib/server/secret.ts`
 - Server only modules can only be imported by other server-only modules
+- Server only `load()` return value must be serialisable
 
 ## Environment Variable
 
@@ -46,8 +47,8 @@
   - `cookies.set(name, value, opts)`
   - `cookies.delete(name, opts)`
   - `cookies.serialize(name, value, opts)`
-- TODO: always want to set `{path:'/'}` options
-- TODO: default HTTP_ONLY, SECURE
+- always want to set `{path:'/'}` options, default is based on current path
+- `httpOnly`, `secure` value defaults to `true`
 
 ## Headers
 
@@ -92,8 +93,7 @@
         preload: ({ type, path }) => type === 'js' || path.includes('important'),
       });
       ```
-    - TODO:
-      - eg: set `event.locals.user`
+    - eg: set `event.locals.user`
   - `handleFetch()`
     - modify server `fetch()` in `load()`
     - `({ fetch, request }) => fetch(request)`
@@ -105,4 +105,6 @@
 
 ## Exercise
 
-TODO:
+Add a new login page `/login`
+- takes in email and password
+- set locals.username based on email address

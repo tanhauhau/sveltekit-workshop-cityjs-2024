@@ -1,0 +1,1 @@
+<pre>foo-[suffix]/+page.svelte</pre>

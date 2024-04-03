@@ -15,7 +15,7 @@
 - What SvelteKit is to Svelte:
   - Next.js is to React
   - Nuxt is to Vue
-  - TODO: is to Solid
+  - SolidStart is to Solid
 
 - SvelteKit offers many features out of the box:
   - Different rendering modes:

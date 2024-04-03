@@ -1,0 +1,1 @@
+<pre>foo-bar/+page.svelte</pre>

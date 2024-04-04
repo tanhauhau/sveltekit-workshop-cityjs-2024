@@ -33,4 +33,4 @@
   - ...[community adapters](https://www.sveltesociety.dev/packages?category=sveltekit-adapters)
 
 ## Exercise
-- Deploy
+- Deploy to anywhere you prefer

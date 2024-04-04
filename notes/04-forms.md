@@ -12,6 +12,8 @@
   - `export let form`
     - only defined when form submission failed
 - Named action
+  - `/?name`
+  - [formaction attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#formaction)
   - `throw redirect(303, '/')`
 - `enhance` from `$app/forms`
 - demo6

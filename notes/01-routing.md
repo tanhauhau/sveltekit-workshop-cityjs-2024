@@ -19,6 +19,7 @@
 ## Navigating
 
 - the `<a>` element
+- [link options](https://kit.svelte.dev/docs/link-options)
 
 ## +layout & +error
 

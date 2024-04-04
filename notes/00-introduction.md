@@ -50,6 +50,7 @@
 - Stores
 - Actions
 - Transitions
+- [Docs](https://svelte.dev/)
 
 ## Setting up SvelteKit
 
@@ -64,6 +65,7 @@ pnpm create svelte@latest
   - static/
   - .sveltekit/
   - config files
+- SvelteKit is powered by [Vite](https://vite.dev/)
 
 ## Svelte Inspector
 

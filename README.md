@@ -40,10 +40,3 @@ The recommended code editor is [Visual Studio Code](https://code.visualstudio.co
 To make sure you have the best development experience, do install:
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Svelte for VS Code extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
-
-### Cloudinary
-
-We will be building a photo album app using [Cloudinary](https://cloudinary.com) APIs.
-
-You can sign up for a free account and check out [their APIs](https://cloudinary.com/developers).
-

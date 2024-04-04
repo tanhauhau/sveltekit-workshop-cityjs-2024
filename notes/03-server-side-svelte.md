@@ -41,6 +41,7 @@
       - `import { env } from '$env/dynamic/private';`
 
 ## Cookies
+
 - In server-only load functions
 - Methods
   - `cookies.get(name, opts)`
@@ -58,25 +59,38 @@
   - CORS
 
 ## Server Fetch
+
 - `fetch()` method
   - inherits `cookie` and `authorization` headers from page request
   - make relative requests on the server
 
 ## API Endpoints
+
 - `+server.ts`
-- export named functions
+- export named functions follows HTTP REST naming convention
   - GET
   - POST
   - PATCH
   - PUT
   - DELETE
+- returns [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) instance
+- useful for dynamically creating files too
+  - `rss.xml`
+    ```ts
+    return new Response('<?xml version="1.0" encoding="UTF-8"><rss>...</rss>', {
+      headers: { 'content-type': 'application/xml' },
+    });
+    ```
 
 ### Content negotiation
+
 - `PUT`/`PATCH`/`DELETE` always handled by `+server.ts`
 - `GET`/`POST` requests are page request if the `accept` header has `text/html` as priority
 
 ## Hooks
+
 - app wide functions that can be used to modify the behavior of the app
+- [Docs](https://kit.svelte.dev/docs/hooks)
 - Server hooks
   - `src/hooks.server.ts`
   - `handle()`
@@ -90,7 +104,8 @@
       return resolve(event, {
         transformPageChunk: ({ html, done }) => html.replace('old', 'new'),
         filterSerializedResponseHeaders: (name) => name.startsWith('x-'),
-        preload: ({ type, path }) => type === 'js' || path.includes('important'),
+        preload: ({ type, path }) =>
+          type === 'js' || path.includes('important'),
       });
       ```
     - eg: set `event.locals.user`
@@ -102,9 +117,15 @@
     - `({ error, event }) => ({ message })`
 - Client hooks
   - `src/hooks.client.ts`
+  - `handleError()`
+- Universal hooks
+  - `src/hooks.ts`
+  - `reroute()`
+    - `({ url }) => url`
 
 ## Exercise
 
-Add a new login page `/login`
-- takes in email and password
-- set locals.username based on email address
+- Add a new login page `/login`
+  - takes in email and password
+  - set locals.username based on email address
+  - **CHALLENGE:** redirects user if visit `/photos` without logged in
